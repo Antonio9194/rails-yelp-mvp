@@ -1,0 +1,63 @@
+
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #b30000;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+form {
+  background-color: #fff5f5;
+  border: 1px solid #ffc2c2;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 0 4px 12px rgba(204, 0, 51, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form inputs and selects */
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ffcccc;
+  background-color: #fff0f0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #cc0033;
+  outline: none;
+  background-color: #fff8f8;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #800000;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Submit button */
+input[type="submit"], button {
+  background-color: #ffb3b3;
+  color: #800000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #ff9999;
+  transform: translateY(-2px);
+}

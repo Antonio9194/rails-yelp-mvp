@@ -1,19 +1,24 @@
-<h1><%= @restaurant.name %></h1>
+<div class="restaurant-show">
+  <h1><%= @restaurant.name %></h1>
 
-<h3><%= @restaurant.address %></h3>
+  <h3><%= @restaurant.address %></h3>
+  <h4><%= @restaurant.phone_number %></h4>
+  <h5><%= @restaurant.category %></h5>
 
-<h4><%= @restaurant.phone_number %></h4>
-
-<h5><%= @restaurant.category %></h5>
-
-<% @restaurant.reviews.each do |review| %>
-  <div class="card my-2 p-2">
-    <strong><%= review.rating %>★</strong><br>
-    <%= review.content %>
+  <div class="reviews-section">
+    <% @restaurant.reviews.each do |review| %>
+      <div class="card my-2 p-2">
+        <strong><%= review.rating %>★</strong><br>
+        <%= review.content %>
+      </div>
+    <% end %>
   </div>
-<% end %>
 
-<h4>Add a <%= link_to "review", new_restaurant_review_path(@restaurant)%></h4>
+  <h4>
+    Add a <%= link_to "review", new_restaurant_review_path(@restaurant) %>
+  </h4>
 
-<%= link_to "Go back to the list", restaurants_path %>
-
+  <div class="back-link">
+    <%= link_to "⬅ Go back to the list", restaurants_path %>
+  </div>
+</div>

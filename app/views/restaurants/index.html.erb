@@ -1,11 +1,17 @@
-<h1>Restaurants List</h1>
-
-<h4><%= link_to "Add a new restaurant", new_restaurant_path %></h4>
-
-<ol>
-  <% @restaurants.each do |restaurant| %>
-   <li>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-   </li> 
-  <% end %>
-</ol>
+<div class="container">
+  <div class="main">
+    <h1>Restaurants List</h1>
+     <h4><%= link_to "Add a new restaurant", new_restaurant_path %></h4>
+    <div class="restaurant">
+      <ol>
+        <% @restaurants.each do |restaurant| %>
+        <div class="restaurant-card">
+          <li>
+            <%= link_to restaurant.name, restaurant_path(restaurant) %>
+          </li> 
+        </div>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+</div>
