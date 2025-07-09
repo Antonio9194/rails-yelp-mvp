@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
 
   # You can define a root if needed later:
-  # root "restaurants#index"
+  root "restaurants#index"
 end
