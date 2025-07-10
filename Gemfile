@@ -5,52 +5,55 @@ ruby "3.3.5"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+# The original asset pipeline for Rails
 gem "sprockets-rails"
 
-# Use the Puma web server [https://github.com/puma/puma]
+# Use sqlite3 as the database for Active Record
+gem "sqlite3", ">= 1.4"
+
+# Use the Puma web server
 gem "puma", ">= 5.0"
+
+# For simple form helpers
 gem "simple_form"
 
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+# Use JavaScript with ESM import maps
 gem "importmap-rails"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire: Turbo
 gem "turbo-rails"
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+# Hotwire: Stimulus
 gem "stimulus-rails"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+# Build JSON APIs with ease
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
+# Use Kredis to get higher-level data types in Redis
 # gem "kredis"
 
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+# Use Active Model has_secure_password
 # gem "bcrypt", "~> 3.1.7"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Windows support
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
-# Reduces boot times through caching; required in config/boot.rb
+# Reduces boot times through caching
 gem "bootsnap", require: false
 
-# Use sqlite3 as the database for Active Record in development and test
 group :development, :test do
-  gem "sqlite3", ">= 1.4"
-  
-  # Useful gems for development and test
-  gem "web-console"
+  # Debugging tools
   gem "debug", platforms: %i[ mri windows ]
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
 end
 
-# Use pg as the database for Active Record in production
-group :production do
-  gem 'pg', '~> 1.5', '>= 1.5.9'
+group :development do
+  # Console on exceptions pages
+  gem "web-console"
 end
+
+# Testing gems
+gem 'rspec-rails', group: [ :test ]
+gem 'rails-controller-testing', group: [ :test ]
